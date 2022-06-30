@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather | App</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <meta name="theme-color" content="#000000d0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b5d53223a0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Weather.App</div>
+      <div class="card">
+        <div class="search">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search City | ZIP Code (US)"
+          />
+          <!-- <input type="text" class="country-code" placeholder="+1" /> -->
+          <button>
+            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            <div class="sbl-circ"></div>
+          </button>
+        </div>
+
+        <button class="currentLocation" onclick="getLocation()">
+          Current Location
+          <i
+            class="fa-solid fa-location-arrow fa-lg"
+            style="padding-left: 10px"
+          ></i>
+        </button>
+        <!-- <button class="currentLocation" style="margin-top: 10px">
+          Random City
+        </button> -->
+        <div class="weather loading">
+          <h2 class="city"></h2>
+          <h1 class="temp"></h1>
+          <div
+            class="feelsLike"
+            style="margin-top: -20px; margin-bottom: 20px"
+          ></div>
+          <label class="toggle" hidden>
+            <input
+              type="checkbox"
+              id="check"
+              name="check"
+              onclick="weather.search()"
+            />
+            <span class="slider"></span>
+            <span class="labels" data-on="°C" data-off="°F"></span>
+          </label>
+          <hr />
+          <img
+            src="https://openweathermap.org/img/wn/04d.png"
+            alt=""
+            class="icon"
+          />
+
+          <div class="description"></div>
+          <div class="humidity"></div>
+          <hr />
+          <div class="wind"></div>
+          <div class="gust"></div>
+          <hr />
+          <div class="maxTemp"></div>
+          <div class="minTemp"></div>
+        </div>
+      </div>
+      <footer>Created by Michael Parascandolo</footer>
+    </div>
+  </body>
+</html>
